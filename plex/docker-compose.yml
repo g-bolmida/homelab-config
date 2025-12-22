@@ -1,0 +1,26 @@
+---
+services:
+  plex:
+    image: linuxserver/plex:1.42.2
+    container_name: plex
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=America/New_York
+      - VERSION=docker
+      - PLEX_CLAIM=${PLEX_CLAIM}
+    dns:
+      - 8.8.8.8
+      - 8.8.4.4
+    network_mode: host
+    volumes:
+      - ${CONFIG_DIR}:/config
+      - media-drive:/media
+    devices:
+      - /dev/dri:/dev/dri
+    restart: always
+
+volumes:
+  media-drive:
+    external: true
+    name: media-drive
