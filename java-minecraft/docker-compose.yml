@@ -1,0 +1,28 @@
+---
+services:
+  minecraft:
+    image: itzg/minecraft-server
+    tty: true
+    stdin_open: true
+    ports:
+      - "25565:25565"
+    volumes:
+      - ${DATA_DIR}:/data
+    environment:
+      SERVER_NAME: "Combusters"
+      MOTD: "(◉‿◉)"
+      EULA: "TRUE"
+      FORCE_GAMEMODE: true
+      MODE: "survival"
+      DIFFICULTY: "easy"
+      ICON: "https://logodix.com/logo/1114498.jpg"
+      MEMORY: 20G
+      TYPE: AUTO_CURSEFORGE
+      VERSION: "1.21"
+      CF_PAGE_URL: "https://www.curseforge.com/minecraft/modpacks/valhelsia-6"
+      CF_API_KEY: $CURSE_FORGE_KEY
+      ENABLE_WHITELIST: true
+      WHITELIST: "gbolmida,grimygecko,sydst1ck,empty_b0w,AlwaysOnEdge"
+      VIEW_DISTANCE: 10
+      SEED: 3929810390010094740
+    restart: always
