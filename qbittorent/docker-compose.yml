@@ -1,0 +1,20 @@
+---
+services:
+  qbittorrent:
+    image: linuxserver/qbittorrent:5.1.4
+    container_name: qbittorrent
+    environment:
+      - PUID=1026
+      - PGID=100
+      - TZ=America/New_York
+      - WEBUI_PORT=8090
+    volumes:
+      - ${CONFIG_DIR}:/config
+      - media-drive:/data
+    network_mode: container:gluetun
+    restart: unless-stopped
+
+volumes:
+  media-drive:
+    external: true
+    name: media-drive

@@ -1,0 +1,24 @@
+---
+services:
+  radarr:
+    image: linuxserver/radarr:6.0.4
+    container_name: radarr
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=America/New_York
+    volumes:
+      - ${CONFIG_DIR}:/config
+      - media-drive:/data
+    networks:
+      teleport:
+    restart: unless-stopped
+
+volumes:
+  media-drive:
+    external: true
+    name: media-drive
+
+networks:
+  teleport:
+    external: true

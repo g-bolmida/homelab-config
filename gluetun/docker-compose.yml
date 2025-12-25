@@ -1,0 +1,25 @@
+---
+services:
+  gluetun:
+    image: qmcgaw/gluetun:v3.41.0
+    container_name: gluetun
+    cap_add:
+      - NET_ADMIN
+    devices:
+      - /dev/net/tun:/dev/net/tun
+    ports:
+      - 8090:8090
+    volumes:
+      - ${DATA_DIR}:/gluetun
+    environment:
+      - PUID=1026
+      - PGID=100
+      - VPN_SERVICE_PROVIDER=protonvpn
+      - OPENVPN_USER=${OPENVPN_USER}
+      - OPENVPN_PASSWORD=${OPENVPN_PASSWORD}
+      - SERVER_COUNTRIES=Switzerland
+      - TZ=America/New_York
+      - FIREWALL_OUTBOUND_SUBNETS=192.168.1.0/24
+    security_opt:
+      - no-new-privileges:true
+    restart: always

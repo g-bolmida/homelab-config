@@ -1,0 +1,14 @@
+---
+services:
+  uptimekuma:
+    image: louislam/uptime-kuma:2.0.2
+    container_name: uptime-kuma
+    networks:
+      teleport:
+    volumes:
+      - ${DATA_DIR}:/app/data
+    restart: always
+
+networks:
+  teleport:
+    external: true
