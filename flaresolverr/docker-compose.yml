@@ -1,0 +1,14 @@
+---
+services:
+  flaresolverr:
+    image: flaresolverr/flaresolverr:v3.4.6
+    container_name: flaresolverr
+    networks:
+      teleport:
+    environment:
+      - LOG_LEVEL=info
+    restart: always
+
+networks:
+  teleport:
+    external: true

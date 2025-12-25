@@ -1,0 +1,18 @@
+---
+services:
+  prowlarr:
+    image: linuxserver/prowlarr:2.3.0
+    container_name: prowlarr
+    environment:
+      - PUID=1026
+      - PGID=100
+      - TZ=America/New_York
+    volumes:
+      - ${CONFIG_DIR}:/config
+    networks:
+      teleport:
+    restart: unless-stopped
+
+networks:
+  teleport:
+    external: true
