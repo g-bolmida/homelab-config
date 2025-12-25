@@ -1,0 +1,30 @@
+---
+version: v3
+teleport:
+  nodename: big-box
+  data_dir: /var/lib/teleport
+  join_params:
+    token_name: <JOIN_TOKEN>
+    method: token
+  proxy_server: bolmida.cloud:443
+  log:
+    output: stderr
+    severity: INFO
+    format:
+      output: text
+  ca_pin: ""
+  diag_addr: ""
+auth_service:
+  enabled: "no"
+ssh_service:
+  enabled: "yes"
+  listen_addr: 127.0.0.1:3022
+  labels:
+    hostname: big-box
+proxy_service:
+  enabled: "no"
+  https_keypairs: []
+  https_keypairs_reload_interval: 0s
+  acme: {}
+app_service:
+  enabled: "no"

@@ -1,0 +1,121 @@
+---
+version: v3
+teleport:
+  nodename: big-box
+  data_dir: /var/lib/teleport
+  join_params:
+    token_name: <JOIN_TOKEN>
+    method: token
+  proxy_server: bolmida.cloud:443
+  log:
+    output: stderr
+    severity: INFO
+    format:
+      output: text
+  ca_pin: ""
+  diag_addr: ""
+auth_service:
+  enabled: "no"
+ssh_service:
+  enabled: "no"
+proxy_service:
+  enabled: "no"
+  https_keypairs: []
+  https_keypairs_reload_interval: 0s
+  acme: {}
+app_service:
+  enabled: "yes"
+  debug_app: false
+  apps:
+    - name: homarr
+      uri: http://homarr:7575
+      public_addr: ""
+      insecure_skip_verify: false
+      labels:
+        access: user
+    - name: overseerr
+      uri: http://overseerr:5055
+      public_addr: "overseerr.bolmida.cloud"
+      insecure_skip_verify: false
+      rewrite:
+        redirect:
+          - "overseerr"
+      labels:
+        access: user
+    - name: radarr
+      uri: http://radarr:7878
+      public_addr: "radarr.bolmida.cloud"
+      insecure_skip_verify: false
+      rewrite:
+        redirect:
+          - "radarr"
+      labels:
+        access: admin
+    - name: prowlarr
+      uri: http://prowlarr:9696
+      public_addr: "prowlarr.bolmida.cloud"
+      insecure_skip_verify: false
+      rewrite:
+        redirect:
+          - "prowlarr"
+      labels:
+        access: admin
+    - name: uptime-kuma
+      uri: http://uptime-kuma:3001
+      public_addr: "uptime.bolmida.cloud"
+      insecure_skip_verify: false
+      labels:
+        access: user
+    - name: sonarr
+      uri: http://sonarr:8989
+      public_addr: "sonarr.bolmida.cloud"
+      insecure_skip_verify: false
+      rewrite:
+        redirect:
+          - "sonarr"
+      labels:
+        access: admin
+    - name: lidarr
+      uri: http://lidarr:8686
+      public_addr: "lidarr.bolmida.cloud"
+      insecure_skip_verify: false
+      rewrite:
+        redirect:
+          - "lidarr"
+      labels:
+        access: admin
+    - name: gitea
+      uri: http://gitea:3000
+      public_addr: "git.bolmida.cloud"
+      insecure_skip_verify: false
+      rewrite:
+        redirect:
+          - "localhost"
+          - "git.bolmida.cloud"
+      labels:
+        access: admin
+    - name: frigate
+      uri: http://192.168.1.193:5000
+      public_addr: "frigate.bolmida.cloud"
+      insecure_skip_verify: false
+      rewrite:
+        redirect:
+          - "192.168.1.193"
+          - "frigate.bolmida.cloud"
+      labels:
+        access: admin
+    - name: vscode-server
+      uri: http://code-server:8443
+      public_addr: "code.bolmida.cloud"
+      insecure_skip_verify: false
+      rewrite:
+        redirect:
+          - "code"
+      labels:
+        access: admin
+    - name: pfsense-ui
+      uri: https://192.168.1.1
+      public_addr: "pf.bolmida.cloud"
+      insecure_skip_verify: true
+      labels:
+        access: admin
