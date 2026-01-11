@@ -5,7 +5,7 @@
     "source": "Docker Hub",
     "repo": "linuxserver/plex",
     "tag": "1.42.2",
-    "repository": "github.com/linuxserver/docker-plex.git"
+    "repository": "github.com/linuxserver/docker-plex"
   },
   {
     "service": "Uptime Kuma",
