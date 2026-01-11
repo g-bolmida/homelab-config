@@ -1,40 +1,5 @@
 [
   {
-    "service": "Flaresolverr",
-    "image": "flaresolverr/flaresolverr:v3.4.6",
-    "source": "Docker Hub",
-    "repo": "flaresolverr/flaresolverr",
-    "tag": "v3.4.6"
-  },
-  {
-    "service": "Gluetun",
-    "image": "qmcgaw/gluetun:v3.41.0",
-    "source": "Docker Hub",
-    "repo": "qmcgaw/gluetun",
-    "tag": "v3.41.0"
-  },
-  {
-    "service": "Home Assistant",
-    "image": "linuxserver/homeassistant:2025.12.4",
-    "source": "Docker Hub",
-    "repo": "linuxserver/homeassistant",
-    "tag": "2025.12.4"
-  },
-  {
-    "service": "Minecraft Server",
-    "image": "itzg/minecraft-server",
-    "source": "Docker Hub",
-    "repo": "itzg/minecraft-server",
-    "tag": "latest"
-  },
-  {
-    "service": "Overseerr",
-    "image": "linuxserver/overseerr:1.34.0",
-    "source": "Docker Hub",
-    "repo": "linuxserver/overseerr",
-    "tag": "1.34.0"
-  },
-  {
     "service": "Plex",
     "image": "linuxserver/plex:1.42.2",
     "source": "Docker Hub",
@@ -42,18 +7,11 @@
     "tag": "1.42.2"
   },
   {
-    "service": "Prowlarr",
-    "image": "linuxserver/prowlarr:2.3.0",
+    "service": "Uptime Kuma",
+    "image": "louislam/uptime-kuma:2.0.2",
     "source": "Docker Hub",
-    "repo": "linuxserver/prowlarr",
-    "tag": "2.3.0"
-  },
-  {
-    "service": "qBittorrent",
-    "image": "linuxserver/qbittorrent:5.1.4",
-    "source": "Docker Hub",
-    "repo": "linuxserver/qbittorrent",
-    "tag": "5.1.4"
+    "repo": "louislam/uptime-kuma",
+    "tag": "2.0.2"
   },
   {
     "service": "Radarr",
@@ -70,10 +28,52 @@
     "tag": "4.0.16"
   },
   {
-    "service": "Uptime Kuma",
-    "image": "louislam/uptime-kuma:2.0.2",
+    "service": "Overseerr",
+    "image": "linuxserver/overseerr:1.34.0",
     "source": "Docker Hub",
-    "repo": "louislam/uptime-kuma",
-    "tag": "2.0.2"
+    "repo": "linuxserver/overseerr",
+    "tag": "1.34.0"
+  },
+  {
+    "service": "Prowlarr",
+    "image": "linuxserver/prowlarr:2.3.0",
+    "source": "Docker Hub",
+    "repo": "linuxserver/prowlarr",
+    "tag": "2.3.0"
+  },
+  {
+    "service": "Home Assistant",
+    "image": "linuxserver/homeassistant:2026.1.0",
+    "source": "Docker Hub",
+    "repo": "linuxserver/homeassistant",
+    "tag": "2026.1.0"
+  },
+  {
+    "service": "Flaresolverr",
+    "image": "flaresolverr/flaresolverr:v3.4.6",
+    "source": "Docker Hub",
+    "repo": "flaresolverr/flaresolverr",
+    "tag": "v3.4.6"
+  },
+  {
+    "service": "Gluetun",
+    "image": "qmcgaw/gluetun:v3.41.0",
+    "source": "Docker Hub",
+    "repo": "qmcgaw/gluetun",
+    "tag": "v3.41.0"
+  },
+  {
+    "service": "Qbittorrent",
+    "image": "linuxserver/qbittorrent:5.1.4",
+    "source": "Docker Hub",
+    "repo": "linuxserver/qbittorrent",
+    "tag": "5.1.4"
+  },
+  {
+    "service": "Minecraft Server",
+    "image": "itzg/minecraft-server",
+    "source": "Docker Hub",
+    "repo": "itzg/minecraft-server",
+    "tag": "latest"
   }
 ]

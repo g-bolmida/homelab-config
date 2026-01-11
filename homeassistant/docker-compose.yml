@@ -1,7 +1,7 @@
 ---
 services:
   homeassistant:
-    image: linuxserver/homeassistant:2025.12.4
+    image: linuxserver/homeassistant:2026.1.0
     container_name: homeassistant
     network_mode: host
     environment:

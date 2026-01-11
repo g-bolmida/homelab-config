@@ -5,3 +5,16 @@ repos:
     hooks:
       - id: yamllint
         args: [--strict]
+  - repo: local
+    hooks:
+      - id: compile-docker-images
+        name: Compile docker images JSON
+        entry: bash
+        args:
+          - -c
+          - './compile-docker-images.sh && git add docker-images.json'
+        language: system
+        files: docker-compose\.yml$
+        pass_filenames: false
+        stages: [pre-commit]
+        always_run: true
