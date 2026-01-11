@@ -53,6 +53,18 @@ sanitize_repo() {
     echo "$repo"
 }
 
+# Function to extract repo URL from repo.json
+get_repo_url() {
+    local compose_dir="$1"
+    local repo_file="${compose_dir}/repo.json"
+    
+    if [[ -f "$repo_file" ]] && command -v jq &> /dev/null; then
+        jq -r '.repo // empty' "$repo_file" 2>/dev/null || echo ""
+    else
+        echo ""
+    fi
+}
+
 # Start JSON array
 echo "[" > "$TEMP_JSON"
 
@@ -62,6 +74,12 @@ first=true
 while IFS= read -r compose_file; do
     # Skip if file doesn't exist
     [[ ! -f "$compose_file" ]] && continue
+    
+    # Get the directory containing the compose file
+    compose_dir="$(dirname "$compose_file")"
+    
+    # Get repo URL if available
+    repo_url=$(get_repo_url "$compose_dir")
     
     # Extract service name and image for each service
     # Using grep to find image lines, then processing them
@@ -85,7 +103,7 @@ while IFS= read -r compose_file; do
             repo=$(sanitize_repo "$full_repo")
             
             # Extract friendly name from path and image
-            dir_name=$(basename "$(dirname "$compose_file")")
+            dir_name=$(basename "$compose_dir")
             service_name=$(echo "$image_spec" | sed 's/.*\///' | sed 's/:.*//g' | sed 's/-/ /g' | sed 's/\b\(.\)/\u\1/g')
             
             # Use directory name for better friendly names
@@ -109,7 +127,7 @@ while IFS= read -r compose_file; do
     "image": "$image_spec",
     "source": "$source",
     "repo": "$repo",
-    "tag": "$tag"
+    "tag": "$tag"$(if [[ -n "$repo_url" ]]; then echo ","; echo '    "repository": "'"$repo_url"'"'; fi)
   }
 EOF
         fi

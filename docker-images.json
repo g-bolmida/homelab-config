@@ -4,76 +4,87 @@
     "image": "linuxserver/plex:1.42.2",
     "source": "Docker Hub",
     "repo": "linuxserver/plex",
-    "tag": "1.42.2"
+    "tag": "1.42.2",
+    "repository": "github.com/linuxserver/docker-plex.git"
   },
   {
     "service": "Uptime Kuma",
     "image": "louislam/uptime-kuma:2.0.2",
     "source": "Docker Hub",
     "repo": "louislam/uptime-kuma",
-    "tag": "2.0.2"
+    "tag": "2.0.2",
+    "repository": "https://github.com/louislam/uptime-kuma"
   },
   {
     "service": "Radarr",
     "image": "linuxserver/radarr:6.0.4",
     "source": "Docker Hub",
     "repo": "linuxserver/radarr",
-    "tag": "6.0.4"
+    "tag": "6.0.4",
+    "repository": "https://github.com/linuxserver/docker-radarr"
   },
   {
     "service": "Sonarr",
     "image": "linuxserver/sonarr:4.0.16",
     "source": "Docker Hub",
     "repo": "linuxserver/sonarr",
-    "tag": "4.0.16"
+    "tag": "4.0.16",
+    "repository": "https://github.com/linuxserver/docker-sonarr"
   },
   {
     "service": "Overseerr",
     "image": "linuxserver/overseerr:1.34.0",
     "source": "Docker Hub",
     "repo": "linuxserver/overseerr",
-    "tag": "1.34.0"
+    "tag": "1.34.0",
+    "repository": "https://github.com/linuxserver/docker-overseerr"
   },
   {
     "service": "Prowlarr",
     "image": "linuxserver/prowlarr:2.3.0",
     "source": "Docker Hub",
     "repo": "linuxserver/prowlarr",
-    "tag": "2.3.0"
+    "tag": "2.3.0",
+    "repository": "https://github.com/linuxserver/docker-prowlarr"
   },
   {
     "service": "Home Assistant",
     "image": "linuxserver/homeassistant:2026.1.0",
     "source": "Docker Hub",
     "repo": "linuxserver/homeassistant",
-    "tag": "2026.1.0"
+    "tag": "2026.1.0",
+    "repository": "https://github.com/linuxserver/docker-homeassistant"
   },
   {
     "service": "Flaresolverr",
     "image": "flaresolverr/flaresolverr:v3.4.6",
     "source": "Docker Hub",
     "repo": "flaresolverr/flaresolverr",
-    "tag": "v3.4.6"
+    "tag": "v3.4.6",
+    "repository": "https://github.com/FlareSolverr/FlareSolverr"
   },
   {
     "service": "Gluetun",
     "image": "qmcgaw/gluetun:v3.41.0",
     "source": "Docker Hub",
     "repo": "qmcgaw/gluetun",
-    "tag": "v3.41.0"
+    "tag": "v3.41.0",
+    "repository": "https://github.com/qdm12/gluetun"
   },
   {
     "service": "Qbittorrent",
     "image": "linuxserver/qbittorrent:5.1.4",
     "source": "Docker Hub",
     "repo": "linuxserver/qbittorrent",
-    "tag": "5.1.4"
+    "tag": "5.1.4",
+    "repository": "https://github.com/linuxserver/docker-qbittorrent"
   },
   {
     "service": "Minecraft Server",
     "image": "itzg/minecraft-server",
     "source": "Docker Hub",
     "repo": "itzg/minecraft-server",
-    "tag": "latest"
+    "tag": "latest",
+    "repository": "https://github.com/itzg/docker-minecraft-server"
   }
 ]
