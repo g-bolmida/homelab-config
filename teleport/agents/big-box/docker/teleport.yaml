@@ -119,3 +119,19 @@ app_service:
       insecure_skip_verify: true
       labels:
         access: admin
+    - name: octoprint
+      uri: https://192.168.1.117
+      public_addr: "octoprint.bolmida.cloud"
+      insecure_skip_verify: true
+      rewrite:
+        redirect:
+          - "192.168.1.117"
+          - "octoprint.bolmida.cloud"
+      labels:
+        access: admin
+    - name: n8n
+      uri: http://n8n:5678
+      public_addr: "n8n.bolmida.cloud"
+      insecure_skip_verify: true
+      labels:
+        access: admin
