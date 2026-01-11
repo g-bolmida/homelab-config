@@ -1,3 +1,4 @@
 {
-    "repo": "https://github.com/linuxserver/docker-overseerr"
+    "owner": "https://github.com/linuxserver",
+    "repo": "docker-overseerr"
 }

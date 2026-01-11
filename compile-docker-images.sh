@@ -54,14 +54,16 @@ sanitize_repo() {
 }
 
 # Function to extract repo URL from repo.json
-get_repo_url() {
+get_repo_info() {
     local compose_dir="$1"
     local repo_file="${compose_dir}/repo.json"
     
     if [[ -f "$repo_file" ]] && command -v jq &> /dev/null; then
-        jq -r '.repo // empty' "$repo_file" 2>/dev/null || echo ""
-    else
-        echo ""
+        local owner=$(jq -r '.owner // empty' "$repo_file" 2>/dev/null)
+        local repo=$(jq -r '.repo // empty' "$repo_file" 2>/dev/null)
+        if [[ -n "$owner" && -n "$repo" ]]; then
+            echo "$owner|$repo"
+        fi
     fi
 }
 
@@ -78,8 +80,8 @@ while IFS= read -r compose_file; do
     # Get the directory containing the compose file
     compose_dir="$(dirname "$compose_file")"
     
-    # Get repo URL if available
-    repo_url=$(get_repo_url "$compose_dir")
+    # Get repo info if available (owner|repo format)
+    repo_info=$(get_repo_info "$compose_dir")
     
     # Extract service name and image for each service
     # Using grep to find image lines, then processing them
@@ -127,7 +129,7 @@ while IFS= read -r compose_file; do
     "image": "$image_spec",
     "source": "$source",
     "repo": "$repo",
-    "tag": "$tag"$(if [[ -n "$repo_url" ]]; then echo ","; echo '    "repository": "'"$repo_url"'"'; fi)
+    "tag": "$tag"$(if [[ -n "$repo_info" ]]; then IFS='|' read -r owner repo_name <<< "$repo_info"; echo ","; echo '    "owner": "'"$owner"'",'; echo '    "repository": "'"$repo_name"'"'; fi)
   }
 EOF
         fi

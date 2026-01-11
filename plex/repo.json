@@ -1,3 +1,4 @@
 {
-    "repo": "github.com/linuxserver/docker-plex"
+    "owner": "https://github.com/linuxserver",
+    "repo": "docker-plex"
 }
