@@ -1,0 +1,43 @@
+---
+# yamllint disable-line rule:truthy
+on:
+  workflow_dispatch: {}
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+jobs:
+  demo-auth-application:
+    runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+    steps:
+      - name: Install Teleport
+        uses: teleport-actions/setup@v1
+        with:
+          # specify version as "auto" and provide the address of your Teleport
+          # proxy using the "proxy" input.
+          version: auto
+          proxy: bolmida.cloud:443
+      - name: Fetch application credentials
+        id: auth
+        uses: teleport-actions/auth-application@v2
+        with:
+          # Specify the publically accessible address of your Teleport proxy.
+          proxy: bolmida.cloud:443
+          # Specify the name of the join token for your bot.
+          token: github-actions-token
+          # Specify the length of time that the generated credentials should be
+          # valid for. This is optional and defaults to "1h"
+          certificate-ttl: 1h
+          # Specify the name of the application you wish to access.
+          app: portainer
+
+          anonymous-telemetry: 0
+      - name: Make request
+        run: |
+          curl --cert ${{ steps.auth.outputs.certificate-file }} \
+            --key ${{ steps.auth.outputs.key-file }} \
+            https://portainer.bolmida.cloud/api/status
