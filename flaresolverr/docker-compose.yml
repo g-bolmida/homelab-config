@@ -7,6 +7,7 @@ services:
       teleport:
     environment:
       - LOG_LEVEL=info
+      - DUMMY_VARIABLE=example
     restart: always
 
 networks:

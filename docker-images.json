@@ -54,6 +54,13 @@
     "repository": "docker-prowlarr"
   },
   {
+    "service": "N8n",
+    "image": "docker.n8n.io/n8nio/n8n",
+    "source": "Docker Hub",
+    "repo": "docker.n8n.io/n8nio/n8n",
+    "tag": "latest"
+  },
+  {
     "service": "Home Assistant",
     "image": "linuxserver/homeassistant:2026.1.0",
     "source": "Docker Hub",
@@ -61,6 +68,15 @@
     "tag": "2026.1.0",
     "owner": "https://github.com/linuxserver",
     "repository": "docker-homeassistant"
+  },
+  {
+    "service": "Qbittorrent",
+    "image": "linuxserver/qbittorrent:5.1.4",
+    "source": "Docker Hub",
+    "repo": "linuxserver/qbittorrent",
+    "tag": "5.1.4",
+    "owner": "https://github.com/linuxserver",
+    "repository": "docker-qbittorrent"
   },
   {
     "service": "Flaresolverr",
@@ -79,15 +95,6 @@
     "tag": "v3.41.0",
     "owner": "https://github.com/qdm12",
     "repository": "gluetun"
-  },
-  {
-    "service": "Qbittorrent",
-    "image": "linuxserver/qbittorrent:5.1.4",
-    "source": "Docker Hub",
-    "repo": "linuxserver/qbittorrent",
-    "tag": "5.1.4",
-    "owner": "https://github.com/linuxserver",
-    "repository": "docker-qbittorrent"
   },
   {
     "service": "Minecraft Server",
