@@ -15,12 +15,7 @@ services:
     network_mode: host
     volumes:
       - ${CONFIG_DIR}:/config
-      - media-drive:/media
+      - /mnt/media-dir:/media
     devices:
       - /dev/dri:/dev/dri
     restart: always
-
-volumes:
-  media-drive:
-    external: true
-    name: media-drive
