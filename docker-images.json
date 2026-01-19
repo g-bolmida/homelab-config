@@ -1,14 +1,5 @@
 [
   {
-    "service": "Plex",
-    "image": "linuxserver/plex:1.42.2",
-    "source": "Docker Hub",
-    "repo": "linuxserver/plex",
-    "tag": "1.42.2",
-    "owner": "https://github.com/linuxserver",
-    "repository": "docker-plex"
-  },
-  {
     "service": "Uptime Kuma",
     "image": "louislam/uptime-kuma:2.0.2",
     "source": "Docker Hub",
@@ -18,47 +9,13 @@
     "repository": "uptime-kuma"
   },
   {
-    "service": "Radarr",
-    "image": "linuxserver/radarr:6.0.4",
-    "source": "Docker Hub",
-    "repo": "linuxserver/radarr",
-    "tag": "6.0.4",
-    "owner": "https://github.com/linuxserver",
-    "repository": "docker-radarr"
-  },
-  {
-    "service": "Sonarr",
-    "image": "linuxserver/sonarr:4.0.16",
-    "source": "Docker Hub",
-    "repo": "linuxserver/sonarr",
-    "tag": "4.0.16",
-    "owner": "https://github.com/linuxserver",
-    "repository": "docker-sonarr"
-  },
-  {
-    "service": "Overseerr",
-    "image": "linuxserver/overseerr:1.34.0",
-    "source": "Docker Hub",
-    "repo": "linuxserver/overseerr",
-    "tag": "1.34.0",
-    "owner": "https://github.com/linuxserver",
-    "repository": "docker-overseerr"
-  },
-  {
-    "service": "Prowlarr",
+    "service": "prowlarr",
     "image": "linuxserver/prowlarr:2.3.0",
     "source": "Docker Hub",
     "repo": "linuxserver/prowlarr",
     "tag": "2.3.0",
     "owner": "https://github.com/linuxserver",
     "repository": "docker-prowlarr"
-  },
-  {
-    "service": "N8n",
-    "image": "docker.n8n.io/n8nio/n8n",
-    "source": "Docker Hub",
-    "repo": "docker.n8n.io/n8nio/n8n",
-    "tag": "latest"
   },
   {
     "service": "Home Assistant",
@@ -70,7 +27,7 @@
     "repository": "docker-homeassistant"
   },
   {
-    "service": "Qbittorrent",
+    "service": "quittorrent",
     "image": "linuxserver/qbittorrent:5.1.4",
     "source": "Docker Hub",
     "repo": "linuxserver/qbittorrent",
@@ -79,22 +36,38 @@
     "repository": "docker-qbittorrent"
   },
   {
-    "service": "Flaresolverr",
-    "image": "flaresolverr/flaresolverr:v3.4.6",
+    "service": "radarr",
+    "image": "linuxserver/radarr:6.0.4",
     "source": "Docker Hub",
-    "repo": "flaresolverr/flaresolverr",
-    "tag": "v3.4.6",
-    "owner": "https://github.com/FlareSolverr",
-    "repository": "FlareSolverr"
+    "repo": "linuxserver/radarr",
+    "tag": "6.0.4",
+    "owner": "https://github.com/linuxserver",
+    "repository": "docker-radarr"
   },
   {
-    "service": "Gluetun",
+    "service": "n8n",
+    "image": "docker.n8n.io/n8nio/n8n",
+    "source": "Docker Hub",
+    "repo": "docker.n8n.io/n8nio/n8n",
+    "tag": "latest"
+  },
+  {
+    "service": "gluetun",
     "image": "qmcgaw/gluetun:v3.41.0",
     "source": "Docker Hub",
     "repo": "qmcgaw/gluetun",
     "tag": "v3.41.0",
     "owner": "https://github.com/qdm12",
     "repository": "gluetun"
+  },
+  {
+    "service": "plex",
+    "image": "linuxserver/plex:1.42.2",
+    "source": "Docker Hub",
+    "repo": "linuxserver/plex",
+    "tag": "1.42.2",
+    "owner": "https://github.com/linuxserver",
+    "repository": "docker-plex"
   },
   {
     "service": "Minecraft Server",
@@ -104,5 +77,32 @@
     "tag": "latest",
     "owner": "https://github.com/itzg",
     "repository": "docker-minecraft-server"
+  },
+  {
+    "service": "flaresolverr",
+    "image": "flaresolverr/flaresolverr:v3.4.6",
+    "source": "Docker Hub",
+    "repo": "flaresolverr/flaresolverr",
+    "tag": "v3.4.6",
+    "owner": "https://github.com/FlareSolverr",
+    "repository": "FlareSolverr"
+  },
+  {
+    "service": "overseerr",
+    "image": "linuxserver/overseerr:1.34.0",
+    "source": "Docker Hub",
+    "repo": "linuxserver/overseerr",
+    "tag": "1.34.0",
+    "owner": "https://github.com/linuxserver",
+    "repository": "docker-overseerr"
+  },
+  {
+    "service": "sonarr",
+    "image": "linuxserver/sonarr:4.0.16",
+    "source": "Docker Hub",
+    "repo": "linuxserver/sonarr",
+    "tag": "4.0.16",
+    "owner": "https://github.com/linuxserver",
+    "repository": "docker-sonarr"
   }
 ]

@@ -9,7 +9,7 @@ services:
       - TZ=America/New_York
     volumes:
       - ${CONFIG_DIR}:/config
-      - media-drive:/data
+      - /mnt/media-dir:/data
     networks:
       teleport:
     restart: unless-stopped
@@ -17,8 +17,3 @@ services:
 networks:
   teleport:
     external: true
-
-volumes:
-  media-drive:
-    external: true
-    name: media-drive

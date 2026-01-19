@@ -10,11 +10,6 @@ services:
       - WEBUI_PORT=8090
     volumes:
       - ${CONFIG_DIR}:/config
-      - media-drive:/data
+      - /mnt/media-dir:/data
     network_mode: container:gluetun
     restart: unless-stopped
-
-volumes:
-  media-drive:
-    external: true
-    name: media-drive
