@@ -8,8 +8,6 @@ services:
       - PGID=100
       - TZ=America/New_York
       - WEBUI_PORT=8090
-    ports:
-      - 8090:8090
     volumes:
       - ${CONFIG_DIR}:/config
       - /mnt/media-dir:/data
