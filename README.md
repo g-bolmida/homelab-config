@@ -25,6 +25,7 @@ No modules.
 | Name | Type |
 |------|------|
 | [b2_bucket.big-box-backup-bucket](https://registry.terraform.io/providers/Backblaze/b2/0.12.0/docs/resources/bucket) | resource |
+| [b2_bucket.gbolmida-gitea-storage](https://registry.terraform.io/providers/Backblaze/b2/0.12.0/docs/resources/bucket) | resource |
 | [b2_bucket.synology-backup-bucket](https://registry.terraform.io/providers/Backblaze/b2/0.12.0/docs/resources/bucket) | resource |
 | [b2_bucket.teleport-auth-backup-bucket](https://registry.terraform.io/providers/Backblaze/b2/0.12.0/docs/resources/bucket) | resource |
 | [linode_firewall.teleport-firewall](https://registry.terraform.io/providers/linode/linode/3.7.0/docs/resources/firewall) | resource |
