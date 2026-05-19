@@ -1,7 +1,7 @@
 ---
 services:
   prowlarr:
-    image: linuxserver/prowlarr:2.3.3-nightly
+    image: linuxserver/prowlarr:2.3.5
     container_name: prowlarr
     environment:
       - PUID=1026
@@ -10,9 +10,9 @@ services:
     volumes:
       - ${CONFIG_DIR}:/config
     networks:
-      teleport:
+      teleport_teleport:
     restart: unless-stopped
 
 networks:
-  teleport:
+  teleport_teleport:
     external: true
