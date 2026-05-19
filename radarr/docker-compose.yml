@@ -1,7 +1,7 @@
 ---
 services:
   radarr:
-    image: linuxserver/radarr:6.1.1-nightly
+    image: linuxserver/radarr:6.1.1
     container_name: radarr
     environment:
       - PUID=1000
@@ -11,9 +11,9 @@ services:
       - ${CONFIG_DIR}:/config
       - /mnt/media-dir:/data
     networks:
-      teleport:
+      teleport_teleport:
     restart: unless-stopped
 
 networks:
-  teleport:
+  teleport_teleport:
     external: true
