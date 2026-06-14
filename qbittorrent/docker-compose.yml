@@ -1,4 +1,5 @@
 ---
+# MANAGED IN GIT, DO NOT EDIT IN PORTAINER
 services:
   qbittorrent:
     image: linuxserver/qbittorrent:5.2.1

@@ -1,4 +1,5 @@
 ---
+# MANAGED IN GIT, DO NOT EDIT IN PORTAINER
 services:
   plex:
     image: linuxserver/plex:1.43.2
