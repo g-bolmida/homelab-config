@@ -1,4 +1,5 @@
 ---
+# MANAGED IN GIT, DO NOT EDIT IN PORTAINER
 services:
   sonarr:
     image: linuxserver/sonarr:4.0.17

@@ -1,4 +1,5 @@
 ---
+# MANAGED IN GIT, DO NOT EDIT IN PORTAINER
 services:
   homeassistant:
     image: linuxserver/homeassistant:2026.6.3
