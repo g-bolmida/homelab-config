@@ -28,10 +28,10 @@
   },
   {
     "service": "quittorrent",
-    "image": "linuxserver/qbittorrent:5.1.4",
+    "image": "linuxserver/qbittorrent:5.2.1",
     "source": "Docker Hub",
     "repo": "linuxserver/qbittorrent",
-    "tag": "5.1.4",
+    "tag": "5.2.1",
     "owner": "https://github.com/linuxserver",
     "repository": "docker-qbittorrent"
   },
