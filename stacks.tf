@@ -78,5 +78,5 @@ resource "portainer_stack" "plex" {
   repository_url            = "https://github.com/g-bolmida/homelab-config"
   repository_reference_name = "refs/heads/main"
   file_path_in_repository   = "./plex/big-box-docker-compose.yml"
-  repository_git_credential_id = 1
+  repository_git_credential_id = 6
 }
