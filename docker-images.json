@@ -1,19 +1,19 @@
 [
   {
     "service": "Uptime Kuma",
-    "image": "louislam/uptime-kuma:2.3.2",
+    "image": "louislam/uptime-kuma:2.4.0",
     "source": "Docker Hub",
     "repo": "louislam/uptime-kuma",
-    "tag": "2.3.2",
+    "tag": "2.4.0",
     "owner": "https://github.com/louislam",
     "repository": "uptime-kuma"
   },
   {
     "service": "prowlarr",
-    "image": "linuxserver/prowlarr:2.3.5",
+    "image": "linuxserver/prowlarr:2.4.0",
     "source": "Docker Hub",
     "repo": "linuxserver/prowlarr",
-    "tag": "2.3.5",
+    "tag": "2.4.0",
     "owner": "https://github.com/linuxserver",
     "repository": "docker-prowlarr"
   },
@@ -37,10 +37,10 @@
   },
   {
     "service": "radarr",
-    "image": "linuxserver/radarr:6.1.1",
+    "image": "linuxserver/radarr:6.2.1",
     "source": "Docker Hub",
     "repo": "linuxserver/radarr",
-    "tag": "6.1.1",
+    "tag": "6.2.1",
     "owner": "https://github.com/linuxserver",
     "repository": "docker-radarr"
   },
@@ -98,10 +98,10 @@
   },
   {
     "service": "sonarr",
-    "image": "linuxserver/sonarr:4.0.16",
+    "image": "linuxserver/sonarr:4.0.17",
     "source": "Docker Hub",
     "repo": "linuxserver/sonarr",
-    "tag": "4.0.16",
+    "tag": "4.0.17",
     "owner": "https://github.com/linuxserver",
     "repository": "docker-sonarr"
   }
