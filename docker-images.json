@@ -1,14 +1,5 @@
 [
   {
-    "service": "Plex",
-    "image": "linuxserver/plex:1.43.2",
-    "source": "Docker Hub",
-    "repo": "linuxserver/plex",
-    "tag": "1.43.2",
-    "owner": "https://github.com/linuxserver",
-    "repository": "docker-plex"
-  },
-  {
     "service": "Uptime Kuma",
     "image": "louislam/uptime-kuma:2.4.0",
     "source": "Docker Hub",
@@ -18,56 +9,13 @@
     "repository": "uptime-kuma"
   },
   {
-    "service": "Radarr",
-    "image": "linuxserver/radarr:6.2.1",
-    "source": "Docker Hub",
-    "repo": "linuxserver/radarr",
-    "tag": "6.2.1",
-    "owner": "https://github.com/linuxserver",
-    "repository": "docker-radarr"
-  },
-  {
-    "service": "Sonarr",
-    "image": "linuxserver/sonarr:4.0.17",
-    "source": "Docker Hub",
-    "repo": "linuxserver/sonarr",
-    "tag": "4.0.17",
-    "owner": "https://github.com/linuxserver",
-    "repository": "docker-sonarr"
-  },
-  {
-    "service": "Seerr",
-    "image": "ghcr.io/seerr-team/seerr:latest",
-    "source": "Docker Hub",
-    "repo": "ghcr.io/seerr-team/seerr",
-    "tag": "latest",
-    "owner": "https://github.com/linuxserver",
-    "repository": "docker-overseerr"
-  },
-  {
-    "service": "Prowlarr",
+    "service": "prowlarr",
     "image": "linuxserver/prowlarr:2.4.0",
     "source": "Docker Hub",
     "repo": "linuxserver/prowlarr",
     "tag": "2.4.0",
     "owner": "https://github.com/linuxserver",
     "repository": "docker-prowlarr"
-  },
-  {
-    "service": "Minecraft Server",
-    "image": "itzg/minecraft-server",
-    "source": "Docker Hub",
-    "repo": "itzg/minecraft-server",
-    "tag": "latest",
-    "owner": "https://github.com/itzg",
-    "repository": "docker-minecraft-server"
-  },
-  {
-    "service": "N8n",
-    "image": "docker.n8n.io/n8nio/n8n",
-    "source": "Docker Hub",
-    "repo": "docker.n8n.io/n8nio/n8n",
-    "tag": "latest"
   },
   {
     "service": "Home Assistant",
@@ -79,7 +27,7 @@
     "repository": "docker-homeassistant"
   },
   {
-    "service": "Qbittorrent",
+    "service": "quittorrent",
     "image": "linuxserver/qbittorrent:5.2.1",
     "source": "Docker Hub",
     "repo": "linuxserver/qbittorrent",
@@ -88,7 +36,50 @@
     "repository": "docker-qbittorrent"
   },
   {
-    "service": "Flaresolverr",
+    "service": "radarr",
+    "image": "linuxserver/radarr:6.2.1",
+    "source": "Docker Hub",
+    "repo": "linuxserver/radarr",
+    "tag": "6.2.1",
+    "owner": "https://github.com/linuxserver",
+    "repository": "docker-radarr"
+  },
+  {
+    "service": "n8n",
+    "image": "docker.n8n.io/n8nio/n8n",
+    "source": "Docker Hub",
+    "repo": "docker.n8n.io/n8nio/n8n",
+    "tag": "latest"
+  },
+  {
+    "service": "gluetun",
+    "image": "qmcgaw/gluetun:v3.41.1",
+    "source": "Docker Hub",
+    "repo": "qmcgaw/gluetun",
+    "tag": "v3.41.1",
+    "owner": "https://github.com/qdm12",
+    "repository": "gluetun"
+  },
+  {
+    "service": "plex",
+    "image": "linuxserver/plex:1.43.2",
+    "source": "Docker Hub",
+    "repo": "linuxserver/plex",
+    "tag": "1.43.2",
+    "owner": "https://github.com/linuxserver",
+    "repository": "docker-plex"
+  },
+  {
+    "service": "Minecraft Server",
+    "image": "itzg/minecraft-server",
+    "source": "Docker Hub",
+    "repo": "itzg/minecraft-server",
+    "tag": "latest",
+    "owner": "https://github.com/itzg",
+    "repository": "docker-minecraft-server"
+  },
+  {
+    "service": "flaresolverr",
     "image": "flaresolverr/flaresolverr:v3.5.0",
     "source": "Docker Hub",
     "repo": "flaresolverr/flaresolverr",
@@ -97,12 +88,21 @@
     "repository": "FlareSolverr"
   },
   {
-    "service": "Gluetun",
-    "image": "qmcgaw/gluetun:v3.41.1",
+    "service": "seerr",
+    "image": "ghcr.io/seerr-team/seerr:latest",
     "source": "Docker Hub",
-    "repo": "qmcgaw/gluetun",
-    "tag": "v3.41.1",
-    "owner": "https://github.com/qdm12",
-    "repository": "gluetun"
+    "repo": "ghcr.io/seerr-team/seerr",
+    "tag": "latest",
+    "owner": "https://github.com/linuxserver",
+    "repository": "docker-overseerr"
+  },
+  {
+    "service": "sonarr",
+    "image": "linuxserver/sonarr:4.0.17",
+    "source": "Docker Hub",
+    "repo": "linuxserver/sonarr",
+    "tag": "4.0.17",
+    "owner": "https://github.com/linuxserver",
+    "repository": "docker-sonarr"
   }
 ]

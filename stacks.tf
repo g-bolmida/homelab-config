@@ -72,24 +72,24 @@ resource "portainer_stack" "big_box_backrest" {
 
 variable "plex_claim" {}
 
-resource "portainer_stack" "plex" {
-  name                      = "plex"
-  deployment_type           = "standalone"
-  method                    = "repository"
-  endpoint_id               = data.portainer_environment.big_box.id
-  repository_url            = "https://github.com/g-bolmida/homelab-config"
-  repository_reference_name = "refs/heads/main"
-  file_path_in_repository   = "./plex/docker-compose.yml"
-  git_repository_authentication = true
-  repository_git_credential_id = 6
-
-  env {
-    name  = "CONFIG_DIR"
-    value = "/home/gbolmida/plex/config"
-  }
-
-  env {
-    name  = "PLEX_CLAIM"
-    value = var.plex_claim
-  }
-}
+#resource "portainer_stack" "plex" {
+#  name                      = "plex"
+#  deployment_type           = "standalone"
+#  method                    = "repository"
+#  endpoint_id               = data.portainer_environment.big_box.id
+#  repository_url            = "https://github.com/g-bolmida/homelab-config"
+#  repository_reference_name = "refs/heads/main"
+#  file_path_in_repository   = "./plex/docker-compose.yml"
+#  git_repository_authentication = true
+#  repository_git_credential_id = 6
+#
+#  env {
+#    name  = "CONFIG_DIR"
+#    value = "/home/gbolmida/plex/config"
+#  }
+#
+#  env {
+#    name  = "PLEX_CLAIM"
+#    value = var.plex_claim
+#  }
+#}
