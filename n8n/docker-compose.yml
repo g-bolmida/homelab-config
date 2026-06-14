@@ -13,8 +13,8 @@ services:
     volumes:
       - ${CONFIG_DIR}:/home/node/.n8n
     networks:
-      - teleport
+      - teleport_teleport
 
 networks:
-  teleport:
+  teleport_teleport:
     external: true
