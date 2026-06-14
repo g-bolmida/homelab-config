@@ -61,3 +61,11 @@ resource "portainer_stack" "n8n" {
     value = "/home/gbolmida/n8n"
   }
 }
+
+resource "portainer_stack" "big_box_backrest" {
+  name            = "backrest"
+  deployment_type = "standalone"
+  method          = "file"
+  endpoint_id     = data.portainer_environment.big_box.id
+  stack_file_path = "./backrest/big-box-docker-compose.yml"
+}
