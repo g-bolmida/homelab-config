@@ -20,7 +20,7 @@ resource "portainer_stack" "flaresolverr" {
 }
 
 resource "portainer_stack" "homeassistant" {
-  name                      = "homeaissistant"
+  name                      = "homeassistant"
   deployment_type           = "standalone"
   method                    = "repository"
   endpoint_id               = data.portainer_environment.local.id
