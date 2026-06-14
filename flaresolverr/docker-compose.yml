@@ -1,15 +1,14 @@
 ---
 services:
   flaresolverr:
-    image: flaresolverr/flaresolverr:v3.4.6
+    image: flaresolverr/flaresolverr:v3.5.0
     container_name: flaresolverr
     networks:
-      teleport:
+      teleport_teleport:
     environment:
       - LOG_LEVEL=info
-      - DUMMY_VARIABLE=example
     restart: always
 
 networks:
-  teleport:
+  teleport_teleport:
     external: true
