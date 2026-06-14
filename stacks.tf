@@ -69,3 +69,14 @@ resource "portainer_stack" "big_box_backrest" {
   endpoint_id     = data.portainer_environment.big_box.id
   stack_file_path = "./backrest/big-box-docker-compose.yml"
 }
+
+resource "portainer_stack" "plex" {
+  name                      = "plex"
+  deployment_type           = "standalone"
+  method                    = "repository"
+  endpoint_id               = data.portainer_environment.big_box.id
+  repository_url            = "https://github.com/g-bolmida/homelab-config"
+  repository_reference_name = "refs/heads/main"
+  file_path_in_repository   = "./plex/big-box-docker-compose.yml"
+  repository_git_credential_id = 1
+}
