@@ -1,0 +1,26 @@
+---
+version: "3.2"
+services:
+  backrest:
+    image: garethgeorge/backrest:v1.13.0
+    container_name: backrest
+    hostname: backrest
+    volumes:
+      - /home/gbolmida/backrest/data:/data
+      - /home/gbolmida/backrest/config:/config
+      - /home/gbolmida/backrest/cache:/cache
+      - /home/gbolmida/backrest/tmp:/tmp
+      - /home/gbolmida:/home-backup
+      - /etc/teleport.yaml:/teleport-backup
+    environment:
+      - BACKREST_DATA=/data
+      - BACKREST_CONFIG=/config/config.json
+      - XDG_CACHE_HOME=/cache
+      - TZ=America/New_York
+    networks:
+      - teleport_teleport
+    restart: unless-stopped
+
+networks:
+  teleport_teleport:
+    external: true

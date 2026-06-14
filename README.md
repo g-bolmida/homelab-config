@@ -30,6 +30,7 @@ No modules.
 | [b2_bucket.teleport-auth-backup-bucket](https://registry.terraform.io/providers/Backblaze/b2/0.12.0/docs/resources/bucket) | resource |
 | [linode_firewall.teleport-firewall](https://registry.terraform.io/providers/linode/linode/3.7.0/docs/resources/firewall) | resource |
 | [linode_instance.teleport-server](https://registry.terraform.io/providers/linode/linode/3.7.0/docs/resources/instance) | resource |
+| [portainer_stack.big_box_backrest](https://registry.terraform.io/providers/portainer/portainer/1.21.0/docs/resources/stack) | resource |
 | [portainer_stack.flaresolverr](https://registry.terraform.io/providers/portainer/portainer/1.21.0/docs/resources/stack) | resource |
 | [portainer_stack.homeassistant](https://registry.terraform.io/providers/portainer/portainer/1.21.0/docs/resources/stack) | resource |
 | [portainer_stack.n8n](https://registry.terraform.io/providers/portainer/portainer/1.21.0/docs/resources/stack) | resource |
