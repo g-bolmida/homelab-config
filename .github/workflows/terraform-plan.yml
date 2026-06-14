@@ -17,6 +17,7 @@ jobs:
       TF_VAR_b2_application_key: ${{ secrets.TF_VAR_B2_APPLICATION_KEY }}
       TF_VAR_linode_api_token: ${{ secrets.TF_VAR_LINODE_API_TOKEN }}
       TF_VAR_linode_root_password: ${{ secrets.TF_VAR_LINODE_ROOT_PASSWORD }}
+      TF_VAR_PLEX_CLAIM: ${{ secrets.TF_VAR_PLEX_CLAIM }}
       AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
       AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
 
