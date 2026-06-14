@@ -48,6 +48,7 @@ No modules.
 | <a name="input_b2_application_key_id"></a> [b2\_application\_key\_id](#input\_b2\_application\_key\_id) | n/a | `any` | n/a | yes |
 | <a name="input_linode_api_token"></a> [linode\_api\_token](#input\_linode\_api\_token) | n/a | `any` | n/a | yes |
 | <a name="input_linode_root_password"></a> [linode\_root\_password](#input\_linode\_root\_password) | n/a | `any` | n/a | yes |
+| <a name="input_plex_claim"></a> [plex\_claim](#input\_plex\_claim) | n/a | `any` | n/a | yes |
 | <a name="input_portainer_api_key"></a> [portainer\_api\_key](#input\_portainer\_api\_key) | n/a | `any` | n/a | yes |
 | <a name="input_portainer_endpoint"></a> [portainer\_endpoint](#input\_portainer\_endpoint) | n/a | `string` | `"https://192.168.1.5:9443"` | no |
 | <a name="input_skip_ssl_verify"></a> [skip\_ssl\_verify](#input\_skip\_ssl\_verify) | n/a | `bool` | `true` | no |
