@@ -70,6 +70,8 @@ resource "portainer_stack" "big_box_backrest" {
   stack_file_path = "./backrest/big-box-docker-compose.yml"
 }
 
+variable "plex_claim" {}
+
 resource "portainer_stack" "plex" {
   name                      = "plex"
   deployment_type           = "standalone"
@@ -80,4 +82,14 @@ resource "portainer_stack" "plex" {
   file_path_in_repository   = "./plex/docker-compose.yml"
   git_repository_authentication = true
   repository_git_credential_id = 6
+
+  env {
+    name  = "CONFIG_DIR"
+    value = "/home/gbolmida/plex/config"
+  }
+
+  env {
+    name  = "PLEX_CLAIM"
+    value = var.plex_claim
+  }
 }
