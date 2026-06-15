@@ -1,0 +1,13 @@
+---
+# MANAGED IN GIT, DO NOT EDIT IN PORTAINER
+services:
+  nanomq:
+    image: emqx/nanomq:0.24-slim
+    ports:
+      - "1883:1883"
+      - "8083:8083"
+      - "8883:8883"
+    volumes:
+      - /volume1/docker/nanomq/nanomq.conf:/etc/nanomq.conf
+      - /volume1/docker/nanomq/nanomq_pwd.conf:/etc/nanomq_pwd.conf
+    restart: always
