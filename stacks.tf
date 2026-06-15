@@ -3,7 +3,7 @@ resource "portainer_stack" "overseerr" {
   deployment_type = "standalone"
   method          = "file"
   endpoint_id     = data.portainer_environment.big_box.id
-  stack_file_path = "./overseerr/docker-compose.yml"
+  stack_file_path = "overseerr/docker-compose.yml"
 
   env {
     name  = "CONFIG_DIR"
@@ -16,7 +16,7 @@ resource "portainer_stack" "flaresolverr" {
   deployment_type = "standalone"
   method          = "file"
   endpoint_id     = data.portainer_environment.big_box.id
-  stack_file_path = "./flaresolverr/docker-compose.yml"
+  stack_file_path = "flaresolverr/docker-compose.yml"
 }
 
 resource "portainer_stack" "homeassistant" {
@@ -26,7 +26,7 @@ resource "portainer_stack" "homeassistant" {
   endpoint_id               = data.portainer_environment.local.id
   repository_url            = "https://github.com/g-bolmida/homelab-config"
   repository_reference_name = "refs/heads/main"
-  file_path_in_repository   = "./homeassistant/docker-compose.yml"
+  file_path_in_repository   = "homeassistant/docker-compose.yml"
   git_repository_authentication = true
   repository_git_credential_id = 6
 
@@ -45,7 +45,7 @@ resource "portainer_stack" "qbittorrent" {
   deployment_type = "standalone"
   method          = "file"
   endpoint_id     = data.portainer_environment.big_box.id
-  stack_file_path = "./qbittorrent/docker-compose.yml"
+  stack_file_path = "qbittorrent/docker-compose.yml"
 
   env {
     name  = "CONFIG_DIR"
@@ -58,7 +58,7 @@ resource "portainer_stack" "n8n" {
   deployment_type = "standalone"
   method          = "file"
   endpoint_id     = data.portainer_environment.big_box.id
-  stack_file_path = "./n8n/docker-compose.yml"
+  stack_file_path = "n8n/docker-compose.yml"
 
   env {
     name  = "CONFIG_DIR"
@@ -71,7 +71,7 @@ resource "portainer_stack" "big_box_backrest" {
   deployment_type = "standalone"
   method          = "file"
   endpoint_id     = data.portainer_environment.big_box.id
-  stack_file_path = "./backrest/big-box-docker-compose.yml"
+  stack_file_path = "backrest/big-box-docker-compose.yml"
 }
 
 variable "plex_claim" {}
@@ -83,7 +83,7 @@ resource "portainer_stack" "plex" {
   endpoint_id               = data.portainer_environment.big_box.id
   repository_url            = "https://github.com/g-bolmida/homelab-config"
   repository_reference_name = "refs/heads/main"
-  file_path_in_repository   = "./plex/docker-compose.yml"
+  file_path_in_repository   = "plex/docker-compose.yml"
   git_repository_authentication = true
   repository_git_credential_id = 6
 
