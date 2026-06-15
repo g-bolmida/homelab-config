@@ -34,6 +34,7 @@ No modules.
 | [portainer_stack.flaresolverr](https://registry.terraform.io/providers/portainer/portainer/1.21.0/docs/resources/stack) | resource |
 | [portainer_stack.homeassistant](https://registry.terraform.io/providers/portainer/portainer/1.21.0/docs/resources/stack) | resource |
 | [portainer_stack.n8n](https://registry.terraform.io/providers/portainer/portainer/1.21.0/docs/resources/stack) | resource |
+| [portainer_stack.nanomq](https://registry.terraform.io/providers/portainer/portainer/1.21.0/docs/resources/stack) | resource |
 | [portainer_stack.overseerr](https://registry.terraform.io/providers/portainer/portainer/1.21.0/docs/resources/stack) | resource |
 | [portainer_stack.plex](https://registry.terraform.io/providers/portainer/portainer/1.21.0/docs/resources/stack) | resource |
 | [portainer_stack.qbittorrent](https://registry.terraform.io/providers/portainer/portainer/1.21.0/docs/resources/stack) | resource |
