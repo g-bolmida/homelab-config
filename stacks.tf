@@ -110,14 +110,14 @@ resource "portainer_stack" "nanomq" {
   repository_git_credential_id = 6
 }
 
-resource "portainer_stack" "nanomq" {
-  name                      = "nanomq"
+resource "portainer_stack" "zwave-js" {
+  name                      = "zwave-js"
   deployment_type           = "standalone"
   method                    = "repository"
   endpoint_id               = data.portainer_environment.local.id
   repository_url            = "https://github.com/g-bolmida/homelab-config"
   repository_reference_name = "refs/heads/main"
-  file_path_in_repository   = "nanomq/docker-compose.yml"
+  file_path_in_repository   = "zwave-js/docker-compose.yml"
   git_repository_authentication = true
   repository_git_credential_id = 6
 }
