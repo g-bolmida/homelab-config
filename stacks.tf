@@ -97,3 +97,27 @@ resource "portainer_stack" "plex" {
     value = var.plex_claim
   }
 }
+
+resource "portainer_stack" "nanomq" {
+  name                      = "nanomq"
+  deployment_type           = "standalone"
+  method                    = "repository"
+  endpoint_id               = data.portainer_environment.local.id
+  repository_url            = "https://github.com/g-bolmida/homelab-config"
+  repository_reference_name = "refs/heads/main"
+  file_path_in_repository   = "nanomq/docker-compose.yml"
+  git_repository_authentication = true
+  repository_git_credential_id = 6
+}
+
+resource "portainer_stack" "nanomq" {
+  name                      = "nanomq"
+  deployment_type           = "standalone"
+  method                    = "repository"
+  endpoint_id               = data.portainer_environment.local.id
+  repository_url            = "https://github.com/g-bolmida/homelab-config"
+  repository_reference_name = "refs/heads/main"
+  file_path_in_repository   = "nanomq/docker-compose.yml"
+  git_repository_authentication = true
+  repository_git_credential_id = 6
+}

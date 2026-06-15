@@ -36,6 +36,20 @@
     "repository": "docker-qbittorrent"
   },
   {
+    "service": "nanomq",
+    "image": "emqx/nanomq:0.24-slim",
+    "source": "Docker Hub",
+    "repo": "emqx/nanomq",
+    "tag": "0.24-slim"
+  },
+  {
+    "service": "zwave js ui",
+    "image": "zwavejs/zwave-js-ui:latest",
+    "source": "Docker Hub",
+    "repo": "zwavejs/zwave-js-ui",
+    "tag": "latest"
+  },
+  {
     "service": "radarr",
     "image": "linuxserver/radarr:6.2.1",
     "source": "Docker Hub",

@@ -1,0 +1,14 @@
+---
+# MANAGED IN GIT, DO NOT EDIT IN PORTAINER
+services:
+  zwavejs:
+    image: zwavejs/zwave-js-ui:latest
+    container_name: zwavejs
+    volumes:
+      - /volume1/docker/zwavejs/store:/usr/src/app/store
+    ports:
+      - 8091:8091
+      - 3000:3000
+    devices:
+      - /dev/ttyACM1:/dev/ttyACM1
+    restart: always
