@@ -2,7 +2,7 @@
 # MANAGED IN GIT, DO NOT EDIT IN PORTAINER
 services:
   prowlarr:
-    image: linuxserver/prowlarr:2.4.0
+    image: linuxserver/prowlarr:2.5.2
     container_name: prowlarr
     environment:
       - PUID=1026

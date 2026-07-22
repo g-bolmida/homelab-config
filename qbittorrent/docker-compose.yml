@@ -2,7 +2,7 @@
 # MANAGED IN GIT, DO NOT EDIT IN PORTAINER
 services:
   qbittorrent:
-    image: linuxserver/qbittorrent:5.2.1
+    image: linuxserver/qbittorrent:5.2.3
     container_name: qbittorrent
     environment:
       - PUID=1026

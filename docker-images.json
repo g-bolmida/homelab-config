@@ -10,37 +10,37 @@
   },
   {
     "service": "prowlarr",
-    "image": "linuxserver/prowlarr:2.4.0",
+    "image": "linuxserver/prowlarr:2.5.2",
     "source": "Docker Hub",
     "repo": "linuxserver/prowlarr",
-    "tag": "2.4.0",
+    "tag": "2.5.2",
     "owner": "https://github.com/linuxserver",
     "repository": "docker-prowlarr"
   },
   {
     "service": "Home Assistant",
-    "image": "linuxserver/homeassistant:2026.6.3",
+    "image": "linuxserver/homeassistant:2026.7.3",
     "source": "Docker Hub",
     "repo": "linuxserver/homeassistant",
-    "tag": "2026.6.3",
+    "tag": "2026.7.3",
     "owner": "https://github.com/linuxserver",
     "repository": "docker-homeassistant"
   },
   {
     "service": "quittorrent",
-    "image": "linuxserver/qbittorrent:5.2.1",
+    "image": "linuxserver/qbittorrent:5.2.3",
     "source": "Docker Hub",
     "repo": "linuxserver/qbittorrent",
-    "tag": "5.2.1",
+    "tag": "5.2.3",
     "owner": "https://github.com/linuxserver",
     "repository": "docker-qbittorrent"
   },
   {
     "service": "nanomq",
-    "image": "emqx/nanomq:0.24-slim",
+    "image": "emqx/nanomq:0.25.2-2-slim",
     "source": "Docker Hub",
     "repo": "emqx/nanomq",
-    "tag": "0.24-slim"
+    "tag": "0.25.2-2-slim"
   },
   {
     "service": "zwave js ui",
@@ -51,10 +51,10 @@
   },
   {
     "service": "radarr",
-    "image": "linuxserver/radarr:6.2.1",
+    "image": "linuxserver/radarr:6.3.0",
     "source": "Docker Hub",
     "repo": "linuxserver/radarr",
-    "tag": "6.2.1",
+    "tag": "6.3.0",
     "owner": "https://github.com/linuxserver",
     "repository": "docker-radarr"
   },
@@ -76,10 +76,10 @@
   },
   {
     "service": "plex",
-    "image": "linuxserver/plex:1.43.2",
+    "image": "linuxserver/plex:1.43.3",
     "source": "Docker Hub",
     "repo": "linuxserver/plex",
-    "tag": "1.43.2",
+    "tag": "1.43.3",
     "owner": "https://github.com/linuxserver",
     "repository": "docker-plex"
   },
@@ -112,10 +112,10 @@
   },
   {
     "service": "sonarr",
-    "image": "linuxserver/sonarr:4.0.17",
+    "image": "linuxserver/sonarr:4.0.19",
     "source": "Docker Hub",
     "repo": "linuxserver/sonarr",
-    "tag": "4.0.17",
+    "tag": "4.0.19",
     "owner": "https://github.com/linuxserver",
     "repository": "docker-sonarr"
   }
