@@ -2,7 +2,7 @@
 # MANAGED IN GIT, DO NOT EDIT IN PORTAINER
 services:
   gluetun:
-    image: qmcgaw/gluetun:v3.41.1
+    image: qmcgaw/gluetun:v3.41.3
     container_name: gluetun
     cap_add:
       - NET_ADMIN
