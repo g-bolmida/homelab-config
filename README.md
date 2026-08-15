@@ -1,3 +1,7 @@
+## Deprecated
+
+Migrating this all to [homelab](https://github.com/g-bolmida/homelab) to be ran within K3s with Argo. I am working to migrate all manual teleport resources into IaC with the teleport terraform provider.
+
 <!-- BEGIN_TF_DOCS -->
 ## Requirements
 
