@@ -2,7 +2,7 @@
 # MANAGED IN GIT, DO NOT EDIT IN PORTAINER
 services:
   plex:
-    image: linuxserver/plex:1.43.2
+    image: linuxserver/plex:1.43.3
     container_name: plex
     environment:
       - PUID=1000
