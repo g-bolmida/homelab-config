@@ -2,7 +2,7 @@
 # MANAGED IN GIT, DO NOT EDIT IN PORTAINER
 services:
   uptimekuma:
-    image: louislam/uptime-kuma:2.4.0
+    image: louislam/uptime-kuma:2.5.3
     container_name: uptime-kuma
     networks:
       teleport_teleport:
