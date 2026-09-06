@@ -23,7 +23,7 @@ terraform {
     }
     b2 = {
       source  = "Backblaze/b2"
-      version = "0.12.0"
+      version = "0.13.2"
     }
     linode = {
       source  = "linode/linode"
